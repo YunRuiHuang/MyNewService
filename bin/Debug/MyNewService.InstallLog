@@ -1,0 +1,148 @@
+﻿正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在回滚程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在将事件日志还原到源 MyNewService 的前一状态。
+在 System.Diagnostics.EventLogInstaller 安装程序的“回退”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security, State。
+在安装的“回退”阶段发生异常。将忽略该异常并继续回退。但是，在完成回退后计算机可能无法完全还原到它的初始状态。
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在回滚程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在将事件日志还原到源 MyNewService 的前一状态。
+在 System.Diagnostics.EventLogInstaller 安装程序的“回退”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security, State。
+在安装的“回退”阶段发生异常。将忽略该异常并继续回退。但是，在完成回退后计算机可能无法完全还原到它的初始状态。
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在回滚程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在将事件日志还原到源 MyNewService 的前一状态。
+在 System.Diagnostics.EventLogInstaller 安装程序的“回退”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security, State。
+在安装的“回退”阶段发生异常。将忽略该异常并继续回退。但是，在完成回退后计算机可能无法完全还原到它的初始状态。
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在回滚程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在将事件日志还原到源 MyNewService 的前一状态。
+在 System.Diagnostics.EventLogInstaller 安装程序的“回退”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security, State。
+在安装的“回退”阶段发生异常。将忽略该异常并继续回退。但是，在完成回退后计算机可能无法完全还原到它的初始状态。
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在回滚程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在将事件日志还原到源 MyNewService 的前一状态。
+在 System.Diagnostics.EventLogInstaller 安装程序的“回退”阶段发生异常。
+System.Security.SecurityException: 未找到源，但未能搜索某些或全部事件日志。  不可访问的日志: Security, State。
+在安装的“回退”阶段发生异常。将忽略该异常并继续回退。但是，在完成回退后计算机可能无法完全还原到它的初始状态。
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+已成功安装服务 MyNewService。
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在提交程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在卸载程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在移除 EventLog 源 MyNewService。
+正在从系统中移除服务 MyNewService...
+已成功地从系统中移除服务 MyNewService。
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+已成功安装服务 MyNewService。
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在提交程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在回滚程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在将事件日志还原到源 MyNewService 的前一状态。
+正在卸载程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在移除 EventLog 源 MyNewService。
+正在从系统中移除服务 MyNewService...
+已成功地从系统中移除服务 MyNewService。
+正在安装程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog
+正在安装服务 MyNewService...
+已成功安装服务 MyNewService。
+正在日志 Application 中创建 EventLog 源 MyNewService...
+正在提交程序集“C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe”。
+受影响的参数是:
+   logtoconsole = 
+   assemblypath = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+   logfile = C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.InstallLog

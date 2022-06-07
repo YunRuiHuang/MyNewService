@@ -1,0 +1,11 @@
+C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe.config
+C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.exe
+C:\Users\16507\source\repos\MyNewService\bin\Debug\MyNewService.pdb
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.csproj.AssemblyReference.cache
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.csproj.SuggestedBindingRedirects.cache
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.MyNewService.resources
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.ProjectInstaller.resources
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.csproj.GenerateResource.cache
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.csproj.CoreCompileInputs.cache
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.exe
+C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.pdb
