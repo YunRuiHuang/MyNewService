@@ -11,12 +11,13 @@ using System.Timers;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Azure.Messaging.ServiceBus;
-
+using Newtonsoft.Json;
 
 namespace MyNewService
 {
     public partial class MyNewService : ServiceBase
     {
+        
         public MyNewService()
         {
             InitializeComponent();
@@ -57,6 +58,9 @@ namespace MyNewService
         [DllImport("advapi32.dll", SetLastError = true)]
         private static extern bool SetServiceStatus(System.IntPtr handle, ref ServiceStatus serviceStatus);
 
+
+        
+
         protected override void OnStart(string[] args)
         {
             // Update the service state to Start Pending.
@@ -86,9 +90,9 @@ namespace MyNewService
                 }
             }
             */
-
-            Send(eventLog1);
-            //Receive();
+           
+            //Send(eventLog1);
+            Receive();
 
             Timer timer = new Timer();
             timer.Interval = 60000; // 60 seconds
@@ -102,6 +106,11 @@ namespace MyNewService
         protected override void OnStop()
         {
             eventLog1.WriteEntry("In OnStop.");
+            // Calling DisposeAsync on client types is required to ensure that network
+            // resources and other unmanaged objects are properly cleaned up.
+            processor.StopProcessingAsync();
+            processor.DisposeAsync();
+            receiveClient.DisposeAsync();
         }
 
         protected override void OnContinue()
@@ -150,7 +159,8 @@ namespace MyNewService
         static string connectionString = "Endpoint=sb://busofazure.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ALZIn0YTuNENlVDOQsuVFi8zk0F+224+zZv5Q9P9HsI=";
 
         // name of your Service Bus queue
-        static string queueName = "myqueue";
+        static string receiveQueueName = "myqueue";
+        static string sendQueueName = "serverqueue";
 
         // the client that owns the connection and can be used to create senders and receivers
         static ServiceBusClient senderClient;
@@ -165,28 +175,39 @@ namespace MyNewService
         // number of messages to be sent to the queue
         private const int numOfMessages = 3;
 
-        static async Task Send(EventLog eventLog1)
+        
+         async Task Send(int input)
         {
+            
             // The Service Bus client types are safe to cache and use as a singleton for the lifetime
             // of the application, which is best practice when messages are being published or read
             // regularly.
             //
             // Create the clients that we'll use for sending and processing messages.
             senderClient = new ServiceBusClient(connectionString);
-            sender = senderClient.CreateSender(queueName);
+            sender = senderClient.CreateSender(sendQueueName);
+            String report;
+            if(input == -1)
+            {
+                report = JsonConvert.SerializeObject(GetAllProcess());
+            }
+            else
+            {
+                report = JsonConvert.SerializeObject(KillProcessByID(input));
+            }
+            
 
             // create a batch 
             ServiceBusMessageBatch messageBatch = await sender.CreateMessageBatchAsync();
 
-            for (int i = 1; i <= numOfMessages; i++)
+           
+            // try adding a message to the batch
+            if (!messageBatch.TryAddMessage(new ServiceBusMessage(report)))
             {
-                // try adding a message to the batch
-                if (!messageBatch.TryAddMessage(new ServiceBusMessage($"Message {i}")))
-                {
-                    // if it is too large for the batch
-                    throw new Exception($"The message {i} is too large to fit in the batch.");
-                }
+                // if it is too large for the batch
+                throw new Exception($"The message is too large to fit in the batch.");
             }
+
 
             try
             {
@@ -210,23 +231,28 @@ namespace MyNewService
         //receive part
 
         // handle received messages
-        static async Task MessageHandler(ProcessMessageEventArgs args)
+         async Task MessageHandler(ProcessMessageEventArgs args)
         {
-            string body = args.Message.Body.ToString();
-            Console.WriteLine($"Received: {body}");
+            int body = JsonConvert.DeserializeObject<int>(args.Message.Body.ToString());
+            //Console.WriteLine($"Received: {body}");
+            //Dictionary<int, string> Outputer = GetAllProcess();
+            
+            await Send(body);
 
+            //await Send(new EventLog());
+            
             // complete the message. message is deleted from the queue. 
             await args.CompleteMessageAsync(args.Message);
         }
 
         // handle any errors when receiving messages
-        static Task ErrorHandler(ProcessErrorEventArgs args)
+         Task ErrorHandler(ProcessErrorEventArgs args)
         {
             Console.WriteLine(args.Exception.ToString());
             return Task.CompletedTask;
         }
 
-        static async Task Receive(EventLog eventLog1)
+         async Task Receive()
         {
             // The Service Bus client types are safe to cache and use as a singleton for the lifetime
             // of the application, which is best practice when messages are being published or read
@@ -237,8 +263,8 @@ namespace MyNewService
             receiveClient = new ServiceBusClient(connectionString);
 
             // create a processor that we can use to process the messages
-            processor = receiveClient.CreateProcessor(queueName, new ServiceBusProcessorOptions());
-
+            processor = receiveClient.CreateProcessor(receiveQueueName, new ServiceBusProcessorOptions());
+            
             try
             {
                 // add handler to process messages
@@ -255,16 +281,19 @@ namespace MyNewService
 
                 // stop processing 
                 //Console.WriteLine("\nStopping the receiver...");
-                await processor.StopProcessingAsync();
+                //await processor.StopProcessingAsync();
                 //Console.WriteLine("Stopped receiving messages");
             }
             finally
             {
                 // Calling DisposeAsync on client types is required to ensure that network
                 // resources and other unmanaged objects are properly cleaned up.
-                await processor.DisposeAsync();
-                await receiveClient.DisposeAsync();
+               // await processor.StopProcessingAsync();
+               // await processor.DisposeAsync();
+               // await receiveClient.DisposeAsync();
+                
             }
+           
         }
 
     }

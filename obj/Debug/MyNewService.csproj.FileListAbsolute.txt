@@ -50,3 +50,5 @@ C:\Users\16507\source\repos\MyNewService\bin\Debug\System.Text.Json.xml
 C:\Users\16507\source\repos\MyNewService\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\16507\source\repos\MyNewService\bin\Debug\System.ValueTuple.xml
 C:\Users\16507\source\repos\MyNewService\obj\Debug\MyNewService.csproj.CopyComplete
+C:\Users\16507\source\repos\MyNewService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\16507\source\repos\MyNewService\bin\Debug\Newtonsoft.Json.xml
