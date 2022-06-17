@@ -135,6 +135,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\TodoItem.cs" />
     <Compile Include="MyNewService.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Azure.Messaging.ServiceBus;
 using Newtonsoft.Json;
+using MyNewService.Models;
 
 namespace MyNewService
 {
@@ -176,7 +177,7 @@ namespace MyNewService
         private const int numOfMessages = 3;
 
         
-         async Task Send(int input)
+         async Task Send(TodoItem input)
         {
             
             // The Service Bus client types are safe to cache and use as a singleton for the lifetime
@@ -187,13 +188,15 @@ namespace MyNewService
             senderClient = new ServiceBusClient(connectionString);
             sender = senderClient.CreateSender(sendQueueName);
             String report;
-            if(input == -1)
+            if(Int32.Parse(input.Name) == -1)
             {
                 report = JsonConvert.SerializeObject(GetAllProcess());
+                input.Name = report;
             }
             else
             {
-                report = JsonConvert.SerializeObject(KillProcessByID(input));
+                report = JsonConvert.SerializeObject(KillProcessByID(Int32.Parse(input.Name)));
+                input.Name = report;
             }
             
 
@@ -202,7 +205,7 @@ namespace MyNewService
 
            
             // try adding a message to the batch
-            if (!messageBatch.TryAddMessage(new ServiceBusMessage(report)))
+            if (!messageBatch.TryAddMessage(new ServiceBusMessage(JsonConvert.SerializeObject(input))))
             {
                 // if it is too large for the batch
                 throw new Exception($"The message is too large to fit in the batch.");
@@ -233,7 +236,7 @@ namespace MyNewService
         // handle received messages
          async Task MessageHandler(ProcessMessageEventArgs args)
         {
-            int body = JsonConvert.DeserializeObject<int>(args.Message.Body.ToString());
+            TodoItem body = JsonConvert.DeserializeObject<TodoItem>(args.Message.Body.ToString());
             //Console.WriteLine($"Received: {body}");
             //Dictionary<int, string> Outputer = GetAllProcess();
             
